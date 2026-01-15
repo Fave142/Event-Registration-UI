@@ -1,0 +1,113 @@
+:root {
+    --primary: #0f172a;   
+    --accent: #059669;     
+    --text: #334155;       
+    --bg: #f8fafc;         
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+    background: var(--primary);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li { margin: 0 20px; }
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--accent); }
+
+/* LAYOUT CONTAINER */
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+h1 { color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; }
+h2, h3 { color: var(--primary); margin-top: 30px; }
+
+/* TABLE STYLING (Schedule) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+th {
+    background: #f1f5f9;
+    color: var(--primary);
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td { padding: 15px; border-bottom: 1px solid #f1f5f9; }
+
+tr:hover { background: #f8fafc; }
+
+/* FORM STYLING */
+form { display: grid; gap: 20px; }
+
+.form-group { display: flex; flex-direction: column; }
+
+label { font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; color: var(--primary); }
+
+input[type="text"], input[type="email"], select, textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus { outline: none; border-color: var(--accent); }
+
+.radio-group { display: flex; gap: 20px; align-items: center; }
+
+button {
+    background: var(--primary);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: var(--accent); }
+
+/* UTILITIES */
+.btn-secondary { color: var(--accent); font-weight: 600; text-decoration: none; }
+
